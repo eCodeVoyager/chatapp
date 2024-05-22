@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/header') %>
+  </head>
+  <body>
+    <div class="appwrapper">
+      <div class="app">
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <img
+              src="http://127.0.0.1:3000<%= user.avatar %>"
+              alt="User Avatar"
+              class="user-avatar"
+              id="mainAvatar"
+            />
+            <h2>Chats</h2>
+            <button id="uploadBtn">Upload Profile</button>
+            <input type="file" id="fileInput" style="display: none" />
+          </div>
+          <div class="sidebar-search">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search or start new chat"
+            />
+          </div>
+
+          <ul class="user-list" id="userList">
+            <% users.forEach(user => { %>
+            <li class="user">
+              <img src="<%= user.avatar %>" alt="<%= user.name %>" />
+              <div class="user-info">
+                <span class="user-name"><%= user.name %></span>
+                <span class="user-status">Online</span>
+              </div>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="chat-container">
+          <div class="chat-header">
+            <div class="chat-header-info">
+              <img src="" class="chat-user-avatar" id="chatAvatar" hidden />
+              <span class="chat-user-name"></span>
+            </div>
+          </div>
+          <div class="chat-box"></div>
+          <div class="chat-input">
+            <input type="text" placeholder="Type a message" />
+            <button id="sendMessageBtn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/search.js"></script>
+  </body>
+</html>

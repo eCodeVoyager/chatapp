@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appwrapper {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  background-color: #201e30;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.app {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #2a2f32;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.auth-box {
+  background-color: #2a2f32;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-group input {
+  width: 93%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #323739;
+  color: #e0e0e0;
+}
+
+button {
+  width: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34b7f1;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #34a7e0;
+}
+
+p {
+  margin-top: 15px;
+}
+
+p a {
+  color: #34b7f1;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #1e2428;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #2a2f32;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #2a2f32;
+  background-color: #2a2f32;
+}
+
+.sidebar-header .user-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sidebar-search {
+  padding: 10px;
+  border-bottom: 1px solid #2a2f32;
+  background-color: #1e1e1e;
+}
+
+.sidebar-search input {
+  width: 93%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #323739;
+  color: #e0e0e0;
+}
+
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #2a2f32;
+}
+
+.user:hover {
+  background-color: #323739;
+}
+
+.user img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-status {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.chat-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d0d0d;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #2a2f32;
+  background-color: #2a2f32;
+}
+
+.chat-header-info {
+  display: flex;
+  align-items: center;
+}
+
+.chat-user-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-user-name {
+  font-weight: bold;
+}
+
+.chat-box {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: url('https://www.transparenttextures.com/patterns/black-paper.png') center center / cover;
+}
+
+.chat-message {
+  max-width: 60%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.chat-message.sent {
+  align-self: flex-end;
+  background-color: #056162;
+  color: #fff;
+}
+
+.chat-message.received {
+  align-self: flex-start;
+}
+
+.chat-message .time {
+  display: block;
+  font-size: 0.8em;
+  color: #999;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #2a2f32;
+  background-color: #1e2428;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #323739;
+  color: #e0e0e0;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: #34b7f1;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #34a7e0;
+}
+
+.chat-input button i {
+  font-size: 1.2em;
+}
+
+#mainAvatar {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+#chatAvatar {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+#listUserAvatar {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
